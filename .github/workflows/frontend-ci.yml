@@ -63,6 +63,9 @@ jobs:
         node-version: 18
         cache: 'npm'
         cache-dependency-path: starter/frontend/package-lock.json
+    - name: Install Dependencies
+      working-directory: starter/frontend
+      run: npm ci
 
     - name: Build and Run Docker Image
       run: |
